@@ -4,8 +4,24 @@ Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
+    # empty_arr = []
+    # for x, value in enumerate(arr):
+    #     count = 1
+    #     for i, n in enumerate(arr):
+    #         if i != x:
+    #             count *= n
+    #     empty_arr.append(count)
+    # return empty_arr
+   
+    value = 1
+    empty_arr = []
+    for x in arr:
+        value = x * value
+    for i in arr:
+        empty_arr.append(value / i)
 
-    pass
+    return empty_arr        
+       
 
 
 if __name__ == '__main__':
